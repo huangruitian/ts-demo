@@ -17,6 +17,15 @@
 # client
 - ajax 请求数据
 - react 全家桶，antd
+- react脚手架：
+- create-react-app/nextjs/umijs
+- create-react-app client --typescript 用官方的脚手架，指定TS
+
+# 关注点
+- ts 如何和react全家桶结合是重点，开发功能无需过多关注
+- 要先完成ajax请求
+- 
+
 
 开发顺序：先server -> client
 

@@ -48,7 +48,7 @@ const upload = multer({
 // 3.如何限制文件后缀名？ 配置 fileFilter
 // 4.当发生错误时，如何响应给客户端；正确又如何响应？
 // 4.1 正确响应文件的路径，错误就响应错误消息
-// 5.静态资源如何被访问？
+// 5.静态资源如何被访问？设置 express
 router.post("/", (req, res) => {
     // 先处理上传的文件
     upload(req, res, (err) => {
