@@ -21,3 +21,4 @@
 - express，npm i -D express
 - express 是js写的，还有安装一个类型库
 - npm i -D @types/express
+- 注意很多js库没有声明文件， npm i -D @types/xxx 下载
