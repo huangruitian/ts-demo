@@ -24,7 +24,8 @@
 # 关注点
 - ts 如何和react全家桶结合是重点，开发功能无需过多关注
 - 要先完成ajax请求
-- 
+- npm i -D axios
+- "proxy":"http://localhost:30001"  3000请求30001，记得代理，不然不跨域
 
 
 开发顺序：先server -> client

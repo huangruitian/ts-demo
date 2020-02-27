@@ -1,7 +1,7 @@
 import "reflect-metadata";// class-transformer 要用到这个库
 import Express from "express";
-import MovieRouter from "./routes/movieRoute";
-import UploadRoute from "./routes/movieRoute";
+import MovieRouter from "./routes/MovieRoute";
+import UploadRoute from "./routes/UploadRoute";
 
 // express、koa2 两个差不多
 const app = Express()
@@ -20,4 +20,4 @@ app.use("/api/movie", MovieRouter)
 // 通常情况下，服务器会提供一个统一的接口，处理上传的图片
 app.use("/api/upload", UploadRoute)
 
-app.listen(3000)
+app.listen(3001)
