@@ -15,19 +15,20 @@ export interface IMovie {
 }
 
 export class MovieService {
-    // 这里就可以详细的描述出返回的类型，方便后面使用
+    // 这里就可以详细的描述出返回的类型，方便后面then使用
     public static async add(movie: IMovie): Promise<IResponseData<IMovie> | IResponseError> {
         const { data } = await axios.post("/api/movie", movie)
         return data
     }
 
-    public static async edit(id:string, movie: IMovie): Promise<IResponseData<true> | IResponseError> {
-        const { data } = await axios.put("/api/movie" + id, movie)
+    // Partial 类型演算，所有属性变成可选
+    public static async edit(id:string, movie: Partial<IMovie>): Promise<IResponseData<true> | IResponseError> {
+        const { data } = await axios.put("/api/movie/" + id, movie)
         return data
     }
 
     public static async delete(id:string): Promise<IResponseData<true> | IResponseError> {
-        const { data } = await axios.delete("/api/movie" + id)
+        const { data } = await axios.delete("/api/movie/" + id)
         return data
     }
 

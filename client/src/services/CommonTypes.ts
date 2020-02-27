@@ -10,7 +10,7 @@ export interface IResponseData<T> {
     code:number
 }
 
-// 把服务器响应的结果描述出来
+// 把服务器响应的结果描述出来，其实这里也可以考虑使用继承，少写点代码
 export interface IResponsePageData<T> {
     err: "",
     data: T[],
@@ -25,3 +25,8 @@ export interface ISearchCondition {
     key?:string,
 }
 
+export enum SwitchType {
+    isHot = "isHot",
+    isComing = "isComing",
+    isClassic = "isClassic"
+}
